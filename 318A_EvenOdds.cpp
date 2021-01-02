@@ -6,24 +6,23 @@ using namespace std;
 
 int main()
 {
-    int n, k;
+    long long int n, k;
 
     cin >> n >> k;
 
-    vector<int> numberList;
+    k = k - 1;
 
-    for (int i = 1; i <= n; i += 2)
+    long long int greatestOddIndex = n - (n / 2) - 1;
+
+    if (k <= greatestOddIndex)
     {
-        numberList.push_back(i);
+        cout << k * 2 + 1 << endl;
     }
 
-    for (int i = 2; i <= n; i += 2)
+    else
     {
-        numberList.push_back(i);
+        cout << (k - greatestOddIndex) * 2 << endl;
     }
-
-
-    cout <<  numberList.at(k - 1);
 
 
     return 0;
