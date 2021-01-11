@@ -1,1 +1,2 @@
-side2
+
+    cout << "the size: " << theSet.size();
